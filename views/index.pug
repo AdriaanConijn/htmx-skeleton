@@ -3,15 +3,15 @@ html
     head
         title "Hello World!"
         link(rel="icon", type="image/x-icon", href="/public/favicon.ico")
-        script(src="https://unpkg.com/htmx.org@2.0.1")
 
     body
         header
             h1 Hello World!
         include partials/partial.pug
 
-        div(hx-get="/htmx", hx-swap="outerHTML")
-            p gghghggg
+        #htmx-test(hx-get="/htmx", hx-swap="outerHTML")
+            p REPLACE ME
             //- TODO: Figure out why this doesn't fucking work
         button(hx-post="/clicked", hx-swap="outerHTML")
             p click me
+        script(src="https://unpkg.com/htmx.org@2.0.1")

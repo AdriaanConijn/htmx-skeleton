@@ -6,7 +6,7 @@ async function routes(fastify, options) {
         return reply.view("htmx", {});
     });
     fastify.post("clicked", async (req, reply) => {
-        return reply.view("htmx", {});
+        return reply.view("partials/clicked", {});
     });
 }
 
